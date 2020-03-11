@@ -7,9 +7,8 @@ public class Démarrage {
 
 	public static listeQuestion listeQuestion;
 
-	@SuppressWarnings("null")
 	private static void jeuNiOuiNiNon() {
-		listeQuestion listeQuestion = null;
+		listeQuestion listeQuestion = new listeQuestion();
 		int nombreReponseBonne = 0;
 		String reponse = new String();
 		int index = (int) (Math.random() * 10);
@@ -27,7 +26,7 @@ public class Démarrage {
 				nombreReponseBonne += 1;
 				System.out.println();
 				System.out.println("Question n°" + nombreReponseBonne + "\n");
-				System.out.println("\n Ici se trouvera une question");
+				System.out.println(listeQuestion.get());
 				reponse = sc.nextLine();
 			}
 		}
